@@ -43,7 +43,7 @@ public class Product implements Serializable {
 	// porque não aceita repetições, então vamos usar o set
 	
 	@ManyToMany
-	@JoinTable( name = "tb_product_category",
+	@JoinTable( name = "tb_product_category ",
 		joinColumns = @JoinColumn(name =  "product_id"),
 		inverseJoinColumns = @JoinColumn(name = "category_id"))
 	Set<Category> categories = new HashSet<>();

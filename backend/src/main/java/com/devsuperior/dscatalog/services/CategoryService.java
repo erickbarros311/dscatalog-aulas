@@ -54,6 +54,7 @@ public class CategoryService {
 		try {
 			Category entity = repository.getOne(id); // instancia provisório para não ir no banco duas vezes e só vai
 														// quando for salvar
+			//Category entity = repository.getReferenceById(id);
 			entity.setName(dto.getName());
 			entity = repository.save(entity);
 			return new CategoryDTO(entity);
